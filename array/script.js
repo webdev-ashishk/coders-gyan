@@ -150,4 +150,12 @@ const totall = movies.reduce((acc, m) => {
 const search = movies.find((s) => {
   return s.budget === 200;
 });
-console.log(search);
+// console.log(search);
+//------------------Learning sort method---------------------------->
+const myarr = ["ashish", "banana", "zebra", "dog", "elephand"];
+console.log(myarr.sort());
+
+//------------------Learning slice method---------------------------->
+//note splice method delete the element of an array
+myarr.splice(2, 1);
+console.log(myarr);
