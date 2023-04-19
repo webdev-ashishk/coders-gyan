@@ -153,9 +153,22 @@ const search = movies.find((s) => {
 // console.log(search);
 //------------------Learning sort method---------------------------->
 const myarr = ["ashish", "banana", "zebra", "dog", "elephand"];
-console.log(myarr.sort());
+// console.log(myarr.sort());
 
 //------------------Learning slice method---------------------------->
 //note splice method delete the element of an array
 myarr.splice(2, 1);
-console.log(myarr);
+// console.log(myarr);
+
+const admins = [2, 4, 5, 7];
+const user = {
+  name: "xyz",
+  id: 7,
+};
+// console.log(admins.indexOf(user.id));
+const isAdmin = admins.indexOf(user.id) > -1;
+// console.log(isAdmin);
+
+//------------------Learning includes method---------------------------->
+//note: instead of splice you can use includes
+console.log(admins.includes(user.id));
