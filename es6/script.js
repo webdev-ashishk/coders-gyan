@@ -151,6 +151,24 @@ for (const [key, value] of Object.entries(obj)) {
   // console.log(key, value);
 }
 
+///////////////////timestamp: 1hr 22min--------find(array method)-----/////
+//Note: when element is found the terminate from the loop
+// const usr = [{ name: "rakesh" }, { name: "santosh" }];
+// const u = usr.find((search) => {
+//   return (search.name === "rakesh");
+// });
+// console.log(u);
+// findIndex
+//note: if element is found the index will return
+//when element is not found then return -1
+const usr = [{ name: "rakesh" }, { name: "santosh" }];
+const u = usr.findIndex((search) => {
+  // return search.name === "rakesh";
+  // return search.name === "santosh";
+  // return search.name === "ashish";
+});
+console.log(u);
+
 // timestamp: 1hr27min:30sec--------Set----------------->
 // set is an object in js
 // set contain unique elements
