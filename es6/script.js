@@ -71,12 +71,12 @@ const year = user.year;
 const { fname: fullname } = users;
 // console.log(fullname);
 
-const person = ["nitin", "2", "engineer"];
-// console.log(person[0]);
-// console.log(person[1]);
-// console.log(person[2]);
+const Parent = ["nitin", "2", "engineer"];
+// console.log(Parent[0]);
+// console.log(Parent[1]);
+// console.log(Parent[2]);
 //----------Array destructuring------------------>
-const [name, age, profession] = person;
+const [name, age, profession] = Parent;
 // console.log(name);
 // console.log(age);
 // console.log(profession);
@@ -195,21 +195,22 @@ for (const [key, value] of urls) {
 // 3. Fast insert comparet to object
 
 //<----TimeStamp: 1hr: 41min: 10sec-----------Classes------------------------>
-//when classes are not present then we used cunstructore to create a class
+// when classes are not present then we used cunstructore to create a class
+// Too much complex to use inheritance!
 
-// function Person(name) {
+// function Parent(name) {
 //   this.name = name;
 // }
-// const rakesh = new Person("rakesh");
-// const nitish = new Person("nitish");
-// const santosh = new Person("santosh");
+// const rakesh = new Parent("rakesh");
+// const nitish = new Parent("nitish");
+// const santosh = new Parent("santosh");
 // console.log(rakesh);
 // console.log(nitish);
 // console.log(santosh);
 
 // After es6 cames we create classes in like this
 
-class Person {
+class Parentt {
   name;
   constructor(name) {
     this.name = name;
@@ -218,13 +219,26 @@ class Person {
     console.log("greed called");
   }
 }
-const rakesh = new Person("rakesh");
-const nitish = new Person("nitish");
-const santosh = new Person("santosh");
+const rakesh = new Parentt("rakesh");
+const nitish = new Parentt("nitish");
+const santosh = new Parentt("santosh");
 console.log(rakesh);
 console.log(nitish);
 console.log(santosh);
-//Note: greet fun is availabe for every object of person class
+//Note: greet fun is availabe for every object of Parent class
 console.log(rakesh.greet());
 console.log(nitish.greet());
 console.log(santosh.greet());
+
+//extends key word just like public in cpp
+//using extends key word we do inheritance
+// we can do overiding here also
+class Child extends Parentt {
+  att = "happy";
+  greet() {
+    console.log("child called!");
+  }
+}
+const ashish = new Child("Ashish");
+console.log(ashish);
+console.log(ashish.greet());
