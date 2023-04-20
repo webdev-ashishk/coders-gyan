@@ -95,7 +95,7 @@ const register = (_name, password, image = "default.image") => {
 //-----------------TimeStamp: 55:41sec---------------->
 //***************spread operator*********************************** */
 //0]spread do cello coppy
-//Note: 1]when we clone object or array
+//Note: 1]Used when we clone object or array
 //      2]We can add newArray element or new object element
 //      3]We can override the existing values also
 const lang = ["c", "c++", "js", "python"];
@@ -124,3 +124,107 @@ const addItems = (...item) => {
   // console.log(item);
 };
 addItems(10, 20, 40);
+
+//TimeStamp: 1hr6sec
+
+//-------------For of loop------------------------------->
+// can we used iterable object Array,Obj,string,set,map
+
+//with array
+const n = [2, 4, 5, 9];
+for (const num of n) {
+  // console.log(num);
+}
+//with string
+const str = "javascript";
+for (const char of str) {
+  // console.log(char);
+}
+//with object
+//Note plain object is not iterable
+const obj = {
+  name: "ast",
+  branch: "cs",
+  year: "2016",
+};
+for (const [key, value] of Object.entries(obj)) {
+  // console.log(key, value);
+}
+
+// timestamp: 1hr27min:30sec--------Set----------------->
+// set is an object in js
+// set contain unique elements
+
+const un = new Set();
+un.add(10);
+un.add(20);
+un.add(30);
+un.add(10);
+un.add(40);
+// console.log(un);
+// console.log(un.size);
+// console.log(un.has(30)); //true(found in set)
+// console.log(un.has(50)); //false(not found in set)
+//Most Important  used of set method is removing doublicates
+const doublicateNum = [10, 20, 10, 20, 30, 40, 30];
+const removeDoublicateNum = new Set(doublicateNum);
+// console.log(removeDoublicateNum); //return type is set
+// console.log(Array.from(removeDoublicateNum)); //return type is array
+
+//--------Timestamp: 1hr:31min:20sec-----------Map method-------------->
+//Map method is implementation of hashtables
+//Used for fast lookup (fast search)
+const urls = new Map();
+urls.set("dev", "dev.exam.com");
+urls.set("prod", "prod.exam.com");
+// console.log(urls);
+// console.log(urls.size);
+// console.log(urls.get("dev"));
+// console.log(urls.get("prod"));
+
+for (const url of urls) {
+  // console.log(url);
+}
+
+for (const [key, value] of urls) {
+  // console.log(key, value);
+}
+//we can do same thing without using map but some issue are there!
+// 1. Order problem(not maintain order of element stores but map did)
+// 2. plain object is not iterable but map did
+// 3. Fast insert comparet to object
+
+//<----TimeStamp: 1hr: 41min: 10sec-----------Classes------------------------>
+//when classes are not present then we used cunstructore to create a class
+
+// function Person(name) {
+//   this.name = name;
+// }
+// const rakesh = new Person("rakesh");
+// const nitish = new Person("nitish");
+// const santosh = new Person("santosh");
+// console.log(rakesh);
+// console.log(nitish);
+// console.log(santosh);
+
+// After es6 cames we create classes in like this
+
+class Person {
+  name;
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log("greed called");
+  }
+}
+const rakesh = new Person("rakesh");
+const nitish = new Person("nitish");
+const santosh = new Person("santosh");
+console.log(rakesh);
+console.log(nitish);
+console.log(santosh);
+//Note: greet fun is availabe for every object of person class
+console.log(rakesh.greet());
+console.log(nitish.greet());
+console.log(santosh.greet());
