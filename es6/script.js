@@ -216,7 +216,7 @@ class Parentt {
     this.name = name;
   }
   greet() {
-    console.log("greed called");
+    console.log("parentt called");
   }
 }
 const rakesh = new Parentt("rakesh");
